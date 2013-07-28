@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface HJViewController : UIViewController
+{
+    AudioQueueRef _queue;
+}
 
 @end

@@ -20,6 +20,7 @@
 		3D9BBBAA179D581B003BFFD3 /* HJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9BBBA9179D581B003BFFD3 /* HJViewController.m */; };
 		3D9BBBB1179D5A2E003BFFD3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9BBBB0179D5A2E003BFFD3 /* AVFoundation.framework */; };
 		3D9BBBB3179D7BE4003BFFD3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9BBBB2179D7BE4003BFFD3 /* AudioToolbox.framework */; };
+		3DE4B2D217A154D000F2A60B /* HJAudioQueueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4B2D117A154D000F2A60B /* HJAudioQueueObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		3D9BBBA9179D581B003BFFD3 /* HJViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HJViewController.m; sourceTree = "<group>"; };
 		3D9BBBB0179D5A2E003BFFD3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		3D9BBBB2179D7BE4003BFFD3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3DE4B2D017A154D000F2A60B /* HJAudioQueueObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJAudioQueueObject.h; sourceTree = "<group>"; };
+		3DE4B2D117A154D000F2A60B /* HJAudioQueueObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJAudioQueueObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 				3D9BBBA5179D581B003BFFD3 /* MainStoryboard.storyboard */,
 				3D9BBBA8179D581B003BFFD3 /* HJViewController.h */,
 				3D9BBBA9179D581B003BFFD3 /* HJViewController.m */,
+				3DE4B2D017A154D000F2A60B /* HJAudioQueueObject.h */,
+				3DE4B2D117A154D000F2A60B /* HJAudioQueueObject.m */,
 				3D9BBB94179D581B003BFFD3 /* Supporting Files */,
 			);
 			path = HeadphoneJackSample;
@@ -185,6 +190,7 @@
 				3D9BBB9A179D581B003BFFD3 /* main.m in Sources */,
 				3D9BBB9E179D581B003BFFD3 /* HJAppDelegate.m in Sources */,
 				3D9BBBAA179D581B003BFFD3 /* HJViewController.m in Sources */,
+				3DE4B2D217A154D000F2A60B /* HJAudioQueueObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +313,7 @@
 				3D9BBBAF179D581B003BFFD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

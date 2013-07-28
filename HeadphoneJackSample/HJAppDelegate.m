@@ -7,12 +7,35 @@
 //
 
 #import "HJAppDelegate.h"
+#import <AudioToolbox/AudioToolbox.h>
+
+// 割り込み時コールバック
+static void interruptionCallback(void *inUserData, UInt32 interruptionStatus)
+{
+    NSLog(@"interruptionCallback");
+}
+
+// 経路変化時コールバック
+static void audioRouteChangeListenerCallback(void *inUserData, AudioSessionPropertyID inPropertyID, UInt32 inPropertyValueSize, const void *inPropertyData)
+{
+    NSLog(@"audioRouteChangeListenerCallback");
+}
 
 @implementation HJAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // オーディオセッションの初期化
+    AudioSessionInitialize(NULL, NULL, interruptionCallback, (__bridge void *)(self));
+    
+    // 録音用カテゴリの設定
+    UInt32 sessionCategory = kAudioSessionCategory_RecordAudio;
+    AudioSessionSetProperty(kAudioSessionProperty_AudioCategory, sizeof(sessionCategory), &sessionCategory);
+    
+    // オーディオの経路変化を検知する
+    AudioSessionPropertyID routeChangeID = kAudioSessionProperty_AudioRouteChange;
+    AudioSessionAddPropertyListener(routeChangeID, audioRouteChangeListenerCallback, NULL);
+    
     return YES;
 }
 
